@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    
+    <img src="" alt="">
+
   </div>
 </template>
 
@@ -17,4 +18,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+ .home{
+  height: 500px;
+  background-color: aquamarine;
+ }
+
+</style>
 
