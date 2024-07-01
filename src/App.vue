@@ -24,15 +24,18 @@ export default{
 
 nav a {
   font-weight: bold;
-  color: #670652;
+  color: rgb(2, 2, 94);
   text-decoration: none;
   padding: 10px;
+  font-weight: 900;
 }
 
 nav a.router-link-exact-active {
-  color: #b9427d;
+  color: rgb(160, 115, 156)
+  
 }
 body{
-    background-color: rgb(255, 255, 255);
+  background-image: url('https://yolandamatiwane.github.io/vueProjectImages/3430298.jpg');
+  background-size: cover;
   }
 </style>
