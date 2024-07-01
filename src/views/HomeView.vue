@@ -10,9 +10,9 @@
         <button>Contact Me</button>
       </p>
     </div>
-    <!-- <div class="image">
+    <div class="image">
       
-    </div> -->
+    </div>
 
   </div>
 </template>
@@ -49,6 +49,7 @@ export default {
     font-size: 70px;
     color: #670652
   }
+  
   nav a {
     font-weight: bold;
     color: #670652;
