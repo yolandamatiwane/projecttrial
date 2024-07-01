@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
-    <div class="homeText">
-      <h1 class="animate__animated animate__zoomIn">Good {{ timeOfDay }}</h1>
+  <div class="card" id="home">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12" id="homeText">
+          <h1 class="animate__animated animate__zoomIn">Good {{ timeOfDay }}</h1>
       <h2>I am <span>YOLANDA MATIWANE</span>...</h2>
       <h4>AN ASPIRING DEVELOPER</h4>
       <h2>  Welcome To My Portfolio!</h2>
@@ -9,11 +11,12 @@
         <button>More About Me</button>
         <button>Contact Me</button>
       </p>
+        </div>
+        <div class="col-lg-6 col-sm-12" id="image">
+          <img src="https://yolandamatiwane.github.io/vueProjectImages/istockphoto-1225005851-612x612.jpg" alt="">
+        </div>
+      </div>
     </div>
-    <div class="image">
-      
-    </div>
-
   </div>
 </template>
 
@@ -59,23 +62,23 @@ export default {
   nav a.router-link-exact-active {
     color: #e2d794;
   }
-  .homeText{
+  #homeText{
     margin-top: 100px;
   }
-  .image{
-    background-image: url('https://yolandamatiwane.github.io/vueProjectImages/istockphoto-1225005851-612x612.jpg');
+  #image{
+    
     margin-top: 55px;
     /* margin-left: 300px; */
     width: 40%;
     height: 400px;
     border-radius: 20%;
   }
- .home{
+ #home{
   display: flex;
   justify-content: space-between;
   margin-left: 30px;
-  margin-top: 20px;
-  height: 510px;
+  margin-top: 100px;
+  height: 600px;
   width: 95%;
   color: rgba(20, 0, 109, 0.705);
   font-weight: 900;
