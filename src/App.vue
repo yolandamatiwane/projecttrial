@@ -12,7 +12,20 @@ export default{
   components:{
     NavbarComp,
     FooterComp
-  }
+  },
+  methods: {
+      pageAboutData(){
+        return this.$store.state.aboutMe
+      }
+    },
+    computed:{
+      getAboutMe(){
+        return this.$store.dispatch('getAboutMe')
+      }
+    },
+    mounted() {
+      this.getAboutMe
+    }
 }
 </script>
 
@@ -38,12 +51,13 @@ nav a.router-link-exact-active {
   color: rgb(160, 115, 156) 
 }
 body{
-  background-image: url('https://yolandamatiwane.github.io/vueProjectImages/3430298.jpg');
-  background-size: cover;
+  /* background-image: url('https://slidescorner.com/wp-content/uploads/2022/09/01-Heidi-Pastel-Abstract-Organic-Shapes-Background-by-SlidesCorner.jpg');
+  background-size: cover; */
+  background-color:pink;
 }
 footer{
   height: 40px;
-  position: fixed;
+  position: flex-wrap;
   color:rgb(0, 0, 42); 
   font-weight: 900;
   font-size: 18px;

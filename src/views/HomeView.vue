@@ -65,12 +65,15 @@ export default {
   #homeText{
     margin-top: 100px;
   }
+  img{
+    height:300px;
+  }
   #image{
     
-    margin-top: 55px;
+    margin-top: 50px;
     /* margin-left: 300px; */
     width: 40%;
-    height: 400px;
+    height: 350px;
     border-radius: 20%;
   }
  #home{
@@ -78,7 +81,7 @@ export default {
   justify-content: space-between;
   margin-left: 30px;
   margin-top: 100px;
-  height: 600px;
+  height: 450px;
   width: 95%;
   color: rgba(20, 0, 109, 0.705);
   font-weight: 900;

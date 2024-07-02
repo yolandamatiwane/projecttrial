@@ -1,11 +1,10 @@
 <template>
-  <div class="about">
-    <h1 v-for="detail in pageAboutData()" :key="detail">
-      {{ detail }}
-    </h1>
-  </div>
+    <div>
+        <h1>
+            {{pageAboutData()}}
+        </h1>
+    </div>
 </template>
-
 <script>
 export default {
     methods: {
@@ -20,6 +19,13 @@ export default {
     },
     mounted() {
       this.getAboutMe
-    },
+    }
+    
 }
 </script>
+<style scoped>
+    .card{
+        background-color: palevioletred;
+        height: 400px;
+    }
+</style>
