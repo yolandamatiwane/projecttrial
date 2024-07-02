@@ -36,7 +36,7 @@ export default createStore({
       
       let fetchedInfo = await fetch('https://yolandamatiwane.github.io/first_api/data/')
       let data = await fetchedInfo.json()
-      let {aboutMe,projects,education,skills,workExperience,testimonials}= data
+      let {aboutMe,projects,education,skills,workExperience,testimonails}= data
       console.log(data);
       
 
@@ -45,7 +45,7 @@ export default createStore({
       commit('setEducation',education)
       commit('setSkills',skills)
       commit('setWorkExperience',workExperience)
-      commit('setTestimonials',testimonials)
+      commit('setTestimonials',testimonails)
 
     }
   },

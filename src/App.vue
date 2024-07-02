@@ -8,7 +8,9 @@
 <script>
 import NavbarComp from "./components/NavbarComp.vue"
 import FooterComp from "./components/FooterComp.vue"
+
 export default{
+  
   components:{
     NavbarComp,
     FooterComp
@@ -48,12 +50,13 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: rgb(160, 115, 156) 
+  color: rgb(160, 115, 156);
+
 }
 body{
   /* background-image: url('https://slidescorner.com/wp-content/uploads/2022/09/01-Heidi-Pastel-Abstract-Organic-Shapes-Background-by-SlidesCorner.jpg');
   background-size: cover; */
-  background-color:pink;
+  background-color:rgb(204, 192, 255);
 }
 footer{
   height: 40px;

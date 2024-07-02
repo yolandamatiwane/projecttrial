@@ -79,8 +79,8 @@ export default {
         align-items: center;
     }
     img{
-        width: 40px;
-        height: 40px;
+      width: 40px;
+      height: 40px;
     }
     .logo{
         width: 100px;

@@ -1,9 +1,22 @@
 <template>
   <h3>Projects:</h3>
+  <select v-model="selectedCategory">
+    <option value="">
+      All categories
+    </option>
+    <option value="javascript">
+      Javascript
+    </option>
+    <option value="bootstrap">
+      Bootstrap
+    </option>
+  </select>
   <div id="about">
-    <div class="card" v-for="project in pageProjectData()" :key="project.name">
+    <div class="card" v-for="project in filterProjects" :key="project.name">
       <h5>{{ project.name }}:</h5>
-      <img :src="project.image" alt="">
+      <img v-if="project.visuals.type === 'image'" :src="project.visuals.url">
+      <video :src="project.visuals.url"></video>
+
       <a :href="project.gitHub" target="_blank" class="btn btn-outline-light">GitHub</a>
       <a :href="project.vercel" target="_blank" class="btn btn-outline-light">Live Demo</a>
       
@@ -14,18 +27,21 @@
 </template>
 <script>
 export default {
-    methods: {
-      pageProjectData(){
-        return this.$store.state.projects
+    data(){
+      return {
+        selectedCategory:''
       }
+
     },
     computed:{
-      getProjects(){
-        return this.$store.dispatch('getProjects')
+      filterProjects(){
+        if(this.selectedCategory === '') {
+          return this.$store.state.projects
+        } else{
+          return this.$store.state.projects.filter(project => project.category === this.selectedCategory)
+        }
       }
-    },
-    mounted() {
-      this.getProjects
+      
     }
     
 }
@@ -54,7 +70,7 @@ export default {
   }
   
   .card{
-    background-color: purple;
+    background-color: rgba(128, 0, 128, 0.086);
     /* height: 400px; */
     width:350px;
     margin-left:45px;
