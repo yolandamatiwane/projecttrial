@@ -13,7 +13,8 @@
           </p>
         </div>
         <div class="col-lg-5 col-sm-12" id="image">
-          <img src="https://yolandamatiwane.github.io/vueProjectImages/Untitled%20design%20(1).png" class="animate__animated animate__bounce">
+          <img src="https://yolandamatiwane.github.io/vueProjectImages/wobble%20gif.gif" class="img-fluid" id="overlapImg">
+          <img src="https://yolandamatiwane.github.io/vueProjectImages/girl%20on%20laptop.png" class="img-fluid" id="under">
         </div>
       </div>
     </div>
@@ -46,9 +47,20 @@ export default {
 }
 </script>
 <style scoped>
-  .animate__animated.animate__bounce {
-    --animate-duration: 5s;
-    --animate-repeat: 5;
+  #under{
+    position:absolute;
+    top:0;
+    right:0;
+    width:600px;
+    margin-top:130px;
+    margin-right:70px;
+  }
+  #overlapImg{
+    position:relative;
+    z-index:1;
+    width:900px;
+    height:600px;
+    margin-left:20px;
   }
   .btn-outline-custom, .btn-outline-light{
     margin-left:20px;
@@ -94,10 +106,10 @@ export default {
   #homeText{
     margin-top: 100px;
   }
-  img{
+  /* img{
     width:800px;
     height:500px;
-  }
+  } */
   h2,h4{
     font-family:"Bangers";
     /* font-weight:800; */

@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-lg-9 col-sm-12" id="comment">
                         <h3 class="card-title">{{testimonial.name}}</h3>
-                        <h5>
+                        <h5 card-text>
                             {{ testimonial.message}}
 
                         </h5>
@@ -31,12 +31,6 @@ export default {
 }
 </script>
 <style scoped>
-    /* h1{
-        color:white;
-        font-weight:900;
-        margin-top:100px;
-        text-shadow: 2px 2px 4px #000000;
-    } */
     h1{
     margin-top: 50px;
     font-family:"Bangers";

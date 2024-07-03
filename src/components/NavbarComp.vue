@@ -13,37 +13,49 @@
                   <li class="nav-item">
                     <router-link to="/" @mousemove="show('Home')" @mouseleave="hide()">
                         <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/home%20(1).png">
-                        <span v-if="displayLabel && label==='Home'" class="nav-label">Home</span>
+                        <Transition name="fade" mode="out-in">
+                          <span v-if="displayLabel && label==='Home'" class="nav-label">Home</span>
+                        </Transition>
                     </router-link>
                   </li>
                   <li class="nav-item">
                     <router-link to="/about" @mousemove="show('About')" @mouseleave="hide()">
                         <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/technology.png">
+                      <Transition name="fade" mode="out-in">
                         <span v-if="displayLabel && label==='About'" class="nav-label">About</span>
+                      </Transition>
                     </router-link>
                   </li>
                   <li class="nav-item">
                     <router-link to="/resume" @mousemove="show('Resume')" @mouseleave="hide()"> 
-                        <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/profile.png">
+                      <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/profile.png">
+                      <Transition name="fade" mode="out-in">
                         <span v-if="displayLabel && label==='Resume'" class="nav-label">Resume</span>
+                      </Transition>
                     </router-link>
                   </li>
                   <li class="nav-item">
                     <router-link to="/projects" @mousemove="show('Projects')" @mouseleave="hide()"> 
-                        <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/idea.png">
+                      <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/idea.png">
+                      <Transition name="fade" mode="out-in">
                         <span v-if="displayLabel && label==='Projects'" class="nav-label">Projects</span>
+                      </Transition>
                     </router-link>
                   </li>
                   <li class="nav-item">
                     <router-link to="/testimonials" @mousemove="show('Testimonials')" @mouseleave="hide()"> 
-                        <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/testimonial.png">
+                      <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/testimonial.png">
+                      <Transition name="fade" mode="out-in">
                         <span v-if="displayLabel && label==='Testimonials'" class="nav-label">Testimonials</span>
+                      </Transition>
                     </router-link>
                   </li>
                   <li class="nav-item">
                     <router-link to="/contacts" @mousemove="show('Contacts')" @mouseleave="hide()"> 
-                        <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/contact-me.png">
+                      <img src="https://yolandamatiwane.github.io/vueProjectImages/icons/contact-me.png">
+                      <Transition name="fade" mode="out-in">
                         <span v-if="displayLabel && label==='Contacts'" class="nav-label">Contacts</span>
+                      </Transition>
                     </router-link>
                   </li>           
                 </ul>
@@ -55,21 +67,21 @@
 
 
 export default {
-    data() {
-        return {
-            displayLabel:false,
-            label: ''
-        }
-    },
-    methods:{
-        show(name){
-            this.displayLabel = true;
-            this.label = name;
-        },
-        hide(){
-            this.displayLabel = false;
-        }
+  data() {
+    return {
+      displayLabel:false,
+      label: ''
     }
+  },
+  methods:{
+    show(name){
+      this.displayLabel = true;
+      this.label = name;
+    },
+    hide(){
+      this.displayLabel = false;
+    }
+  }
 }
 </script>
 <style scoped>
@@ -78,13 +90,23 @@ export default {
         display: flex;
         align-items: center;
     }
+    .nav-label{
+      text-shadow: 2px 2px 4px white;
+    }
     img{
       width: 40px;
       height: 40px;
+    }
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity 0.8s ease;
+    }
+    .fade-enter-from,
+    .fade-leave-to {
+      opacity: 0;
     }
     .logo{
         width: 100px;
         height:40px;
     }
-    
 </style>

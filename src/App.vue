@@ -48,7 +48,11 @@ nav a {
   padding: 30px;
   font-weight: 900;
 }
-
+.nav-item{
+  transition:2s;
+}
+.nav-item:hover{
+}
 nav a.router-link-exact-active {
   color: rgb(160, 115, 156);
 
