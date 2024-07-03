@@ -60,7 +60,7 @@ body{
 }
 footer{
   height: 40px;
-  position: flex-wrap;
+  position: fixed;
   color:rgb(0, 0, 42); 
   font-weight: 900;
   font-size: 18px;

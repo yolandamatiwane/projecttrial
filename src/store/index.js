@@ -34,7 +34,7 @@ export default createStore({
   actions: {
     async getAboutMe({commit}){
       
-      let fetchedInfo = await fetch('https://yolandamatiwane.github.io/first_api/data/')
+      try {let fetchedInfo = await fetch('https://yolandamatiwane.github.io/first_api/data/')
       let data = await fetchedInfo.json()
       let {aboutMe,projects,education,skills,workExperience,testimonails}= data
       console.log(data);
@@ -46,7 +46,9 @@ export default createStore({
       commit('setSkills',skills)
       commit('setWorkExperience',workExperience)
       commit('setTestimonials',testimonails)
-
+    } catch(error){
+      console.log('Error fetching data',error.message)
+    }
     }
   },
   modules: {

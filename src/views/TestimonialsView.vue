@@ -31,11 +31,18 @@ export default {
 }
 </script>
 <style scoped>
-    h1{
+    /* h1{
         color:white;
         font-weight:900;
         margin-top:100px;
         text-shadow: 2px 2px 4px #000000;
+    } */
+    h1{
+    margin-top: 50px;
+    font-family:"Bangers";
+    font-size: 100px;
+    color: #bb7aad;
+    text-shadow: 2px 2px 4px #000000;
     }
     h3{
         margin-top:30px;

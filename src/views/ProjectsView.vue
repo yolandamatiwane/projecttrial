@@ -1,5 +1,5 @@
 <template>
-  <h3>Projects:</h3>
+  <h1>Projects:</h1>
   <select v-model="selectedCategory">
     <option value="">
       All categories
@@ -47,6 +47,13 @@ export default {
 }
 </script>
 <style scoped>
+  h1{
+    margin-top: 50px;
+    font-family:"Bangers";
+    font-size: 100px;
+    color: #670652;
+    text-shadow: 2px 2px 4px #000000;
+  }
   h3{
     color:white;
     font-weight: 900;
