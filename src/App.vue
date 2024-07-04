@@ -9,25 +9,21 @@
 import NavbarComp from "./components/NavbarComp.vue"
 import FooterComp from "./components/FooterComp.vue"
 
+
 export default{
   
   components:{
     NavbarComp,
     FooterComp
   },
-  methods: {
-      pageAboutData(){
-        return this.$store.state.aboutMe
-      }
-    },
-    computed:{
-      getAboutMe(){
-        return this.$store.dispatch('getAboutMe')
-      }
-    },
-    mounted() {
-      this.getAboutMe
+  computed:{
+    getAboutMe(){
+      return this.$store.dispatch('getAboutMe')
     }
+  },
+  mounted() {
+    this.getAboutMe
+  }
 }
 </script>
 

@@ -2,12 +2,13 @@
     <div id="resumeMainDiv">
         <h1>Resume:</h1>
         <div class="card">
-            <h5>Education:</h5>
             <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720060177546.gif">
+            <h3>Education:</h3>
             <div v-for="edu in educationData" :key="edu.description">
-                {{ edu.year }}
-                {{ edu.institution }}
-                {{edu.description}}
+                
+                <h4><span>></span> {{ edu.year }}</h4>
+                <h5>{{ edu.institution }}</h5>
+                <h5>{{edu.description}}</h5>
 
             </div>
             
@@ -18,12 +19,13 @@
             <h5>Work Experience:</h5>
             <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720014506045.gif">
             <div v-for="work in workExpData" :key="work.description">
-                {{ work.placeOfWork }}
-                {{ work.year }}
-                {{ work.description }}
-                {{ work.contact.name }}
-                {{ work.contact.position }}
-                {{ work.contact.email }}
+                <h4><span>></span>  {{ work.year }}</h4>
+                <h5><label>Place of Employment:</label> {{ work.placeOfWork }}</h5>
+                <h5>{{ work.description }}</h5>
+                <h6>Reference:</h6>
+                <h5><label>Name:</label> {{ work.contact.name }}</h5>
+                <h5><label>Position:</label> {{ work.contact.position }}</h5>
+                <h5><label>Email:</label> {{ work.contact.email }}</h5>
 
             </div>
 
@@ -32,7 +34,7 @@
             <h5>Skills:</h5>
             <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720014157565.gif">
             <div v-for="skill in skillsData" :key="skill.name">
-                {{ skill.name }}
+                <h5><span>></span> {{ skill.name }}</h5>
                 <!-- <img :src="skill.image"> -->
 
             </div>
@@ -65,7 +67,7 @@ export default {
         background-color:rgb(204, 192, 255);
         font-family:"Bangers";
         margin-bottom: 20px;
-        height:500px;
+        
     }
     #resumeMainDiv {
         margin-top: 60px;
@@ -76,5 +78,8 @@ export default {
         font-size: 100px;
         color: #bb7aad;
         text-shadow: 2px 2px 4px #000000;
+    }
+    label{
+        color:white;
     }
 </style>

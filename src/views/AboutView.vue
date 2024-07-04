@@ -18,7 +18,7 @@
             <h6>For more? please feel free to contact me</h6>
           </div>
           <div class="col-sm-4 lg-12">
-            <img src="https://yolandamatiwane.github.io/vueProjectImages/girl%20on%20laptop.png">
+            <img src="https://yolandamatiwane.github.io/vueProjectImages/20240422_122336.jpg">
           </div>
         </div>
       </div>
@@ -57,13 +57,14 @@ export default {
     text-shadow: 2px 2px 4px #000000;
   }
   .card{
-    color: white;
+    /* color: white; */
     padding:50px;
     height:450px;
     background-color:rgb(204, 192, 255);
     width:90%;
     border:none;
     margin-top:20px;
+    /* text-shadow: 2px 2px 4px white; */
     /* margin-left:90px; */
     /* box-shadow:10px 10px 5px; */
   }
