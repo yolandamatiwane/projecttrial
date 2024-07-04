@@ -3,19 +3,39 @@
         <h1>Resume:</h1>
         <div class="card">
             <h5>Education:</h5>
-            <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720014157565.gif">
+            <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720060177546.gif">
+            <div v-for="edu in educationData" :key="edu.description">
+                {{ edu.year }}
+                {{ edu.institution }}
+                {{edu.description}}
+
+            </div>
             
 
             
         </div>
         <div class="card">
             <h5>Work Experience:</h5>
-            <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720014157565.gif">
+            <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720014506045.gif">
+            <div v-for="work in workExpData" :key="work.description">
+                {{ work.placeOfWork }}
+                {{ work.year }}
+                {{ work.description }}
+                {{ work.contact.name }}
+                {{ work.contact.position }}
+                {{ work.contact.email }}
+
+            </div>
 
         </div>
         <div class="card">
             <h5>Skills:</h5>
             <img src="https://yolandamatiwane.github.io/vueProjectImages/resume/Animation%20-%201720014157565.gif">
+            <div v-for="skill in skillsData" :key="skill.name">
+                {{ skill.name }}
+                <!-- <img :src="skill.image"> -->
+
+            </div>
 
         </div>
     </div>
