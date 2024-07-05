@@ -68,4 +68,64 @@ export default {
     /* margin-left:90px; */
     /* box-shadow:10px 10px 5px; */
   }
+  /* Responsiveness */
+  @media only screen and (max-width: 768px) {
+    /* Adjust layout for smaller screens */
+    #mainAboutDiv {
+      margin: 20px;
+      padding: 10px;
+    }
+   .card {
+      padding: 20px;
+      height: auto;
+      width: 90%;
+    }
+   .col-sm-8 {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+    h6 {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    /* Adjust layout for even smaller screens */
+    #mainAboutDiv {
+      margin: 10px;
+      padding: 5px;
+    }
+   .card {
+      padding: 10px;
+      height: auto;
+      width: 90%;
+    }
+   .col-sm-8 {
+      margin-bottom: 10px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    h5 {
+      font-size: 14px;
+    }
+    h6 {
+      font-size: 12px;
+    }
+  }
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <!-- <spinner-comp></spinner-comp> -->
   <div class="card" id="home">
     <div class="container text-start">
       <div class="row">
@@ -22,6 +23,7 @@
 </template>
 
 <script>
+// import SpinnerComp from '@/components/SpinnerComp.vue';
 export default {
   name: 'HomeView',
   data(){
@@ -42,7 +44,7 @@ export default {
     }
   },
   components: {
-   
+  //  SpinnerComp
   }
 }
 </script>
@@ -92,8 +94,7 @@ export default {
     font-size: 100px;
     color: #670652;
     text-shadow: 2px 2px 4px #000000;
-  }
-  
+  } 
   nav a {
     font-weight: bold;
     color: #670652;
@@ -140,6 +141,69 @@ export default {
     box-shadow: 10px 15px 5px;
     border: none;
   }
+  /* for tablet screens */
+  @media only screen and (max-width:768px){
+    #home{
+      flex-direction: column;
+      margin-top:60px;
+      height: auto;
+      padding: 20px;
+    }
+    #homeText{
+      margin-top: 0;
+    }
+    #image{
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+    }
+    #under{
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+      margin-top: 0;
+      margin-right: 0;
+    }
+    #overlapImg{
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
+    .btn-outline-custom, .btn-outline-light {
+      margin-left: 10px;
+      height: 40px;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 60px;
+    }
+    h2, h4, span {
+      font-size: 24px;
+    }
+  }
+  /* for mobile screens */
+  @media only screen and (max-width:480px){
+    #home{
+      padding:0px;
+    }
+    #image{
+      margin-top: 10px;
+    }
+    .btn-outline-custom, .btn-outline-light {
+      margin-left: 5px;
+      height: 30px;
+      font-size: 14px;
+    }
+    h1{
+      font-size: 36px;  
+    }
+    h2,h4,span{
+      font-size: 16px;
+    }
+  }
+
+
 
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="contactsMainDiv">
-    <spinner-comp></spinner-comp>
+    <!-- <spinner-comp></spinner-comp> -->
     <div class="container-fluid">
       <div class="row">
         <h2>Have questions? Feel free to reach out to me!</h2>
@@ -39,7 +39,12 @@
            </div>
         </div>
         <div class="col-sm-6 lg-12">
-
+          <label>cell: </label><h6>071 312 4564</h6>
+          <label>email: </label><h6>mbalentle.matiwane21@gmail.com</h6>
+          <label>location:</label><h6>Langa, Cape Town, 7455</h6>
+          <h5>socials:</h5>
+          <a href="https://github.com/yolandamatiwane"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/github.png"></a>
+          <a href="www.linkedin.com/in/yolanda-matiwane-73683a17b"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/linkedin%20(1).png"></a>
         </div>
       </div>
     </div>
@@ -47,11 +52,11 @@
 </template>
   
 <script>
-import SpinnerComp from "../components/SpinnerComp.vue"; 
+// import SpinnerComp from "../components/SpinnerComp.vue"; 
   export default {
-    components:{
-    SpinnerComp
-  },
+  //   components:{
+  //   SpinnerComp
+  // },
     data() {
       return {
         name: '',
@@ -113,6 +118,10 @@ import SpinnerComp from "../components/SpinnerComp.vue";
 </script>
 
 <style scoped>
+  img{
+    width:50px;
+    height: 50px;
+  }
   #contactsMainDiv{
     font-family: "Bangers";
     text-align: center;

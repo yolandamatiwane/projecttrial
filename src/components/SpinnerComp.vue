@@ -1,29 +1,53 @@
 <template>
-    <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading...</span>
+    <div class="loading-overlay" v-if='isLoading'>
+        <img src='https://yolandamatiwane.github.io/vueProjectImages/wobble%20gif.gif' class='spinner'>
+    </div>
+    <div class='content' v-if='!isLoading'>
+
     </div>
 </template>
 <script>
 export default {
+  data(){
+    return{
+      isLoading:true
+    }
+  },
+  mounted(){
+    // loading time
+    setTimeout(()=>{
+      this.isLoading = false
+    },2000)
+  }
   
 }
 </script>
 
 <style scoped>
-.spinner-border {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: text-bottom;
-  border: .25em solid currentColor;
-  border-right-color: transparent;
-  border-radius: 50%;
-  animation: spinner-border .75s linear infinite;
-}
-
-@keyframes spinner-border {
-  to {
-    transform: rotate(360deg);
+  .loading-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
   }
-}
+  .spinner{
+    width:100px;
+    height: 100px;
+  }
+  .content{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url();
+    background-size: cover; */
+    color:pink;
+    font-size: 24px;
+  }
 </style>
