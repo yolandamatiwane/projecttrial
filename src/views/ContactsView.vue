@@ -6,7 +6,7 @@
         <h2>Have questions? Feel free to reach out to me!</h2>
         <div class="col-sm-6 lg-12">
           <div class="formcarry-container">
-            <form @submit.prevent="onSubmit">
+            <form @submit="onSubmit">
               <div class="formcarry-block">
                 <label class="form-label" for="name">Full Name</label>
                 <input class="form-control" type="text" required v-model="name" id="name" placeholder="Your first and last name" />
@@ -38,13 +38,13 @@
             </form>
            </div>
         </div>
-        <div class="col-sm-6 lg-12">
+        <div class="col-sm-6 lg-12" id="dets">
           <label>cell: </label><h6>071 312 4564</h6>
           <label>email: </label><h6>mbalentle.matiwane21@gmail.com</h6>
           <label>location:</label><h6>Langa, Cape Town, 7455</h6>
           <h5>socials:</h5>
-          <a href="https://github.com/yolandamatiwane"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/github.png"></a>
-          <a href="www.linkedin.com/in/yolanda-matiwane-73683a17b"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/linkedin%20(1).png"></a>
+          <a href="https://github.com/yolandamatiwane" target="_blank"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/github.png"></a>
+          <a href="www.linkedin.com/in/yolanda-matiwane-73683a17b" target="_blank"><img src="https://yolandamatiwane.github.io/vueProjectImages/icons/linkedin%20(1).png"></a>
         </div>
       </div>
     </div>
@@ -121,6 +121,12 @@
   img{
     width:50px;
     height: 50px;
+    margin-left: 20px;
+  }
+  img:hover{
+    transform: scaleX(1.5);
+    border:4px solid #2c3e50;
+    border-radius: 50%
   }
   #contactsMainDiv{
     font-family: "Bangers";
@@ -146,5 +152,46 @@
   button{
     width:30%;
   }
+  #dets{
+    margin-top: 100px;
+  }
+    /* For small screens (max-width: 768px) */
+    @media only screen and (max-width: 768px) {
+    .formcarry-container {
+      width: 90%;
+      margin-left: 20px;
+    }
+    .col-sm-6 {
+      width: 100%;
+    }
+    #dets {
+      margin-top: 50px;
+    }
+    label {
+      font-size: 18px;
+    }
+    input, textarea {
+      font-size: 16px;
+    }
+    button {
+      width: 40%;
+    }
+  }
 
+  /* For extra small screens (max-width: 480px) */
+  @media only screen and (max-width: 480px) {
+    .formcarry-container {
+      width: 95%;
+      margin-left: 10px;
+    }
+    label {
+      font-size: 16px;
+    }
+    input, textarea {
+      font-size: 14px;
+    }
+    button {
+      width: 50%;
+    }
+  }
 </style>

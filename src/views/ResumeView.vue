@@ -82,4 +82,32 @@ export default {
     label{
         color:white;
     }
+    @media only screen and (max-width: 768px) {
+        img {
+            width: 100%; /* Make image take up full width on mobile */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: 0; /* Remove margin on mobile */
+        }
+    }
+
+   .card {
+        background-color: rgb(204, 192, 255);
+        font-family: "Bangers";
+        margin-bottom: 20px;
+    }
+
+    #resumeMainDiv {
+        margin-top: 60px;
+    }
+
+    h1 {
+        font-family: "Bangers";
+        font-size: 100px;
+        color: #bb7aad;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    label {
+        color: white;
+    }
 </style>
